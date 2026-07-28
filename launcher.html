@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NYC HPD PIMS — Training Center</title><style>
+:root{--ink:#212529;--head:#1532A7;--muted:#6E7689;--link:#1A3BC5;--line:#D9DDE5;--line2:#E7EAF0;--code:#F9FAFB;--codeborder:#D9DDE5;--navy:#1532A7;--accent:#1A3BC5;--do:#1A3BC5;--res:#198754;--soft:#F9FAFB;--orange:#FF6B35;}
+*{box-sizing:border-box;} html{scroll-behavior:smooth;}
+body{margin:0;color:var(--ink);background:#fff;font-family:'Salesforce Sans',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;font-size:16px;}
+a{color:var(--link);text-decoration:none;} a:hover{text-decoration:underline;}
+code{font-family:'SFMono-Regular',Consolas,Menlo,monospace;background:var(--code);border:1px solid var(--codeborder);border-radius:4px;padding:1px 6px;font-size:13.5px;color:#0a2a5e;}
+.topbar{position:sticky;top:0;z-index:10;}
+.tb-top{background:#000;}
+.tb-top .in{width:100%;margin:0;padding:11px 32px;display:flex;align-items:center;gap:14px;}
+.nyc{color:#fff;font-weight:800;font-size:16px;font-style:italic;letter-spacing:.5px;}
+.tb-div{width:1px;height:22px;background:rgba(255,255,255,.45);flex:none;}
+.brand{font-weight:700;color:#fff;font-size:15px;letter-spacing:.2px;}
+.tb-bottom{background:var(--accent);}
+.tb-bottom .in{width:100%;margin:0;padding:9px 32px;display:flex;align-items:center;gap:28px;}
+.hpdpims{display:inline-flex;align-items:center;text-decoration:none;flex:none;}
+.hpdpims img{height:34px;width:auto;display:block;}
+.topnav{display:flex;gap:26px;}
+.topnav a{color:#fff;font-weight:600;font-size:14px;padding:4px 0;border-bottom:2px solid transparent;white-space:nowrap;}
+.topnav a:hover{text-decoration:none;border-bottom-color:rgba(255,255,255,.6);}
+.topnav a.cur{border-bottom-color:#fff;}
+.tb-user{margin-left:auto;display:flex;align-items:center;gap:14px;}
+.bell{color:#fff;display:inline-flex;align-items:center;}
+.bell svg{width:20px;height:20px;}
+.avatar{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;color:#fff;flex:none;}
+.avatar svg{width:18px;height:18px;}
+.uinfo{display:flex;flex-direction:column;line-height:1.2;color:#fff;}
+.uinfo b{font-size:13.5px;font-weight:700;}
+.uinfo small{font-size:11.5px;color:rgba(255,255,255,.78);}
+@media (max-width:760px){.brand{font-size:13px;}.topnav,.uinfo{display:none;}}
+.crumbs{max-width:1260px;margin:0 auto;padding:16px 32px 0;font-size:13px;color:var(--muted);}
+.crumbs a{color:var(--muted);} .crumbs span{margin:0 7px;}
+.wrap{max-width:1260px;margin:0 auto;padding:8px 32px 60px;display:grid;grid-template-columns:288px minmax(0,1fr);gap:52px;}
+main{min-width:0;max-width:880px;}
+h1{font-size:34px;line-height:1.2;color:var(--head);margin:14px 0 6px;font-weight:700;}
+.lead{font-size:17px;color:var(--ink);margin:10px 0 4px;}
+h2{font-size:23px;color:var(--head);font-weight:700;margin:42px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+h3{font-size:18.5px;color:var(--head);font-weight:700;margin:30px 0 4px;}
+p{margin:10px 0;} ul.bul{margin:10px 0;padding-left:22px;} ul.bul li{margin:6px 0;}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px;}
+th,td{border:1px solid var(--line);padding:9px 13px;text-align:left;vertical-align:top;}
+th{background:var(--soft);color:var(--head);font-weight:700;}
+.lbl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 9px;border-radius:4px;margin-right:8px;vertical-align:middle;}
+.lbl-do{background:#e6f0fb;color:var(--do);} .lbl-res{background:#e6f5ec;color:var(--res);}
+.step{scroll-margin-top:108px;} h2,h3{scroll-margin-top:108px;}
+figure{margin:14px 0 4px;}
+figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 14px rgba(16,40,90,.08);}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px;font-style:italic;}
+.flow{list-style:none;margin:14px 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.flow li{display:flex;align-items:center;gap:11px;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:11px 14px;font-weight:600;color:var(--navy);font-size:14.5px;}
+.fnum{flex:none;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12.5px;}
+.callout{background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:14px 18px;margin:14px 0;}
+.note{background:#fff8ec;border:1px solid #f3e2bd;border-left:4px solid #e0a127;border-radius:6px;padding:6px 18px;margin:14px 0;}
+.sidenav{position:sticky;top:104px;align-self:start;font-size:14px;max-height:calc(100vh - 120px);overflow:auto;padding-right:6px;}
+.nav-cat{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:0 0 10px;border-bottom:1px solid var(--line);margin-bottom:8px;}
+ul.nav{list-style:none;margin:0;padding:0;} ul.nav>li{margin:2px 0;}
+a.lvl1{display:block;padding:8px 10px;border-radius:6px;color:var(--head);font-weight:700;}
+a.lvl1:hover{background:var(--soft);text-decoration:none;}
+a.lvl1.cur{color:var(--accent);background:var(--soft);border-left:3px solid var(--accent);padding-left:8px;}
+.proc-list{list-style:none;margin:4px 0 0;padding:0 0 0 12px;border-left:1px solid var(--line2);}
+.proc-list>li{margin:2px 0;}
+a.proc{display:block;padding:6px 10px;border-radius:6px;color:var(--ink);font-weight:600;font-size:13.6px;}
+a.proc:hover{background:var(--soft);text-decoration:none;}
+a.proc.cur{color:var(--accent);background:var(--soft);border-left:3px solid var(--accent);padding-left:8px;}
+a.proc.cur{position:relative;padding-right:24px;}
+a.proc.cur::after{content:"▾";position:absolute;right:10px;top:6px;font-size:11px;color:var(--accent);}
+a.proc.cur.collapsed::after{content:"▸";}
+.sub.collapsed{display:none;}
+.sub{list-style:none;margin:4px 0 10px;padding:0 0 0 4px;} .sub>li{margin:3px 0;}
+.sub a{display:block;padding:4px 10px;border-radius:5px;color:var(--ink);font-size:13.3px;}
+.sub a:hover{background:var(--soft);text-decoration:none;}
+.sub ul{list-style:none;margin:3px 0 6px 10px;padding-left:10px;border-left:1px solid var(--line2);}
+.sub ul li{margin:3px 0;} .sub ul a{color:var(--muted);font-size:12.5px;padding:3px 10px;}
+/* in-page nav links for hub sections */
+ul.nav .page-sec{list-style:none;margin:6px 0 0;padding:0 0 0 12px;border-left:1px solid var(--line2);}
+ul.nav .page-sec>li{margin:2px 0;}
+a.secl{display:block;padding:5px 10px;border-radius:6px;color:var(--ink);font-weight:600;font-size:13.4px;}
+a.secl:hover{background:var(--soft);text-decoration:none;}
+a.secl.cur{color:var(--accent);background:var(--soft);border-left:3px solid var(--accent);padding-left:8px;}
+a.secl.toggle{position:relative;padding-right:24px;}
+a.secl.toggle::after{content:"▸";position:absolute;right:10px;top:5px;font-size:11px;color:var(--accent);}
+a.secl.toggle.open::after{content:"▾";}
+.proc-list.collapsed{display:none;}
+/* search */
+.navsearch{margin-bottom:14px;position:relative;}
+.navsearch input{width:100%;padding:9px 12px 9px 34px;border:1px solid var(--line);border-radius:8px;font-size:13.6px;color:var(--ink);background:var(--soft);}
+.navsearch input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(1,118,211,.12);}
+.navsearch svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--muted);}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#1532A7,#4660CF);color:#fff;border-radius:14px;padding:38px 40px;margin:8px 0 6px;}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.07);}
+.hero::before{content:"";position:absolute;right:60px;bottom:-90px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.05);}
+.hero .eyebrow{position:relative;z-index:1;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#C7D0F1;font-weight:700;margin:0 0 10px;}
+.hero h1{position:relative;z-index:1;color:#fff;margin:0 0 10px;font-size:33px;}
+.hero p{position:relative;z-index:1;color:#e6f0fc;margin:0;font-size:16px;max-width:680px;}
+.statbar{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0 4px;}
+.stat{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:#fff;}
+.stat .n{font-size:24px;font-weight:800;color:var(--head);line-height:1;}
+.stat .t{font-size:12.5px;color:var(--muted);margin-top:6px;}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:20px 0;}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:#fff;transition:.15s;}
+.card:hover{box-shadow:0 8px 22px rgba(16,40,90,.10);border-color:#cfe0f5;transform:translateY(-2px);}
+.card .ic{width:42px;height:42px;border-radius:10px;background:#FFF1EB;display:flex;align-items:center;justify-content:center;color:var(--orange);margin-bottom:14px;}
+.card .ic svg{width:22px;height:22px;}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700;}
+.card h3{margin:6px 0 8px;font-size:18px;color:var(--head);}
+.card p{margin:0 0 14px;color:var(--muted);font-size:14px;}
+.card .meta{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px;}
+.chip{font-size:11.5px;font-weight:600;color:var(--navy);background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:3px 10px;}
+.card a.open{margin-top:auto;font-weight:700;color:var(--accent);}
+.card.hide{display:none;}
+.noresults{display:none;color:var(--muted);font-style:italic;margin:8px 0;}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;}
+.legend .item{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:#fff;}
+.legend .item p{margin:6px 0 0;font-size:14px;color:var(--muted);}
+.faq details{border:1px solid var(--line);border-radius:10px;margin:10px 0;padding:0 18px;background:#fff;}
+.faq summary{cursor:pointer;font-weight:700;color:var(--head);padding:14px 0;list-style:none;font-size:15px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:800;font-size:18px;}
+.faq details[open] summary::after{content:"\2013";}
+.faq details[open] summary{border-bottom:1px solid var(--line2);}
+.faq details p{margin:12px 0;color:var(--ink);font-size:14.5px;}
+.feedback{margin:48px 0 0;border-top:1px solid var(--line);padding-top:22px;}
+.feedback .q{font-weight:700;color:var(--head);font-size:15px;} .feedback .s{color:var(--muted);font-size:14px;margin:4px 0 12px;}
+.btns button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:6px;padding:8px 20px;margin-right:10px;font-size:14px;cursor:pointer;font-weight:600;}
+.btns button:hover{border-color:var(--accent);color:var(--accent);}
+.site-footer{background:#000;color:#fff;margin-top:48px;}
+.site-footer .ft-in{width:100%;margin:0;padding:24px 48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;}
+.ft-left{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0;}
+.ft-left img{height:46px;width:auto;display:block;object-fit:contain;}
+.ft-nav{display:flex;gap:22px;flex-wrap:wrap;}
+.ft-nav a{color:#fff;font-size:13.5px;}
+.ft-right{display:flex;align-items:center;justify-content:flex-end;gap:14px;}
+.ft-right p{color:#FCFCFC;font-size:13px;line-height:1.6;margin:0;text-align:right;}
+.ft-right img{height:46px;width:auto;max-width:100%;display:block;object-fit:contain;}
+.ft-sub{margin:0;padding:14px 48px 40px;color:var(--muted);font-size:12px;}
+@media (max-width:760px){.site-footer .ft-in{flex-direction:column;align-items:flex-start;}.ft-right{justify-content:flex-start;}.ft-right p{text-align:left;}}
+@media (max-width:900px){.wrap{grid-template-columns:1fr;}.sidenav{position:static;max-height:none;}.flow,.cards,.legend,.statbar{grid-template-columns:1fr;}}
+</style>
+<style>
+.launch-wrap{max-width:760px;margin:0 auto;padding:60px 32px;text-align:center;}
+.launch-btn{display:inline-block;margin-top:26px;background:var(--accent);color:#fff;font-weight:700;font-size:17px;padding:15px 34px;border-radius:10px;text-decoration:none;box-shadow:0 6px 18px rgba(16,40,90,.18);}
+.launch-btn:hover{text-decoration:none;background:#1230a0;}
+.quick{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px;}
+.quick a{font-size:13.5px;font-weight:600;color:var(--navy);background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:7px 16px;text-decoration:none;}
+.quick a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+</style></head>
+<body>
+<div class="topbar">
+  <div class="tb-top"><div class="in"><span class="nyc">NYC</span><span class="tb-div"></span><span class="brand">Housing Preservation &amp; Development</span></div></div>
+  <div class="tb-bottom"><div class="in"><a class="hpdpims" href="index.html" target="_blank" rel="noopener"><img src="HPD_Community_Footer_Logo.png" alt="HPD PIMS"/></a><nav class="topnav"><span style="color:#fff;font-weight:600;font-size:14px;">PIMS Training Center</span></nav></div></div>
+</div>
+<div class="launch-wrap">
+  <div class="hero">
+    <p class="eyebrow">NYC HPD &middot; Property &amp; Information Management System</p>
+    <h1>PIMS Training Center</h1>
+    <p>Step-by-step, illustrated guides for the PIMS processes. Click the button below to open the Training Center in a new browser tab.</p>
+  </div>
+  <a class="launch-btn" href="index.html" target="_blank" rel="noopener">Open PIMS Training Center &nearr;</a>
+  <div class="quick">
+    <a href="HPD_PIMS_LAR_Training_Guide.html" target="_blank" rel="noopener">License Agreement Request</a>
+    <a href="HPD_PIMS_NC_Training_Guide.html" target="_blank" rel="noopener">New Construction Intake</a>
+    <a href="HPD_PIMS_AXI_Training_Guide.html" target="_blank" rel="noopener">Article XI</a>
+    <a href="HPD_PIMS_CP_Training_Guide.html" target="_blank" rel="noopener">Certificate to Proceed</a>
+    <a href="HPD_PIMS_MZO_Training_Guide.html" target="_blank" rel="noopener">Mayoral Zoning Override</a>
+    <a href="HPD_PIMS_ER_Training_Guide.html" target="_blank" rel="noopener">Environmental Review</a>
+    <a href="HPD_PIMS_II_Training_Guide.html" target="_blank" rel="noopener">Internal Intake</a>
+  </div>
+  <p style="margin-top:34px;color:var(--muted);font-size:13px;">The Training Center opens in a separate browser tab so you can keep working in Salesforce.</p>
+</div>
+</body></html>
